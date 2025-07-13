@@ -5,9 +5,9 @@ import { useState, useEffect } from 'react';
 
 const navigation = [
     { name: 'Home', href: '#', current: true },
-    { name: 'Soluions', href: '#', current: false },
-    { name: 'Testimonials', href: '#', current: false },
-    { name: 'Pricing', href: '#', current: false },
+    { name: 'About', href: '#', current: false },
+    { name: 'Insights', href: '#', current: false },
+    { name: 'Contact', href: '#', current: false },
 ];
 
 function classNames(...classes) {
@@ -47,7 +47,7 @@ const Topnav = () => {
 
         >
             {({ open }) => (
-                <nav className={`fixed top-0 left-0  w-full z-00 transition-all duration-300 ${open || isScrolled ? 'bg-white/95 shadow-md' : 'bg-transparent'
+                <nav className={`fixed top-0 left-0  w-full z-00 transition-all duration-300 ${open || isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
                     }`} style={{ zIndex: 9999 }}>
                     <div className=" mx-auto w-full px-2 sm:px-6  lg:px-8 lg:w-[80%] xl:w-[70%]  ">
                         <div className="relative flex h-16 items-center   justify-between">
@@ -61,33 +61,34 @@ const Topnav = () => {
                             </div>
 
                             {/* Logo and navigation */}
-                            <div className="flex flex-1 items-center md:items-stretch md:justify-start">
-                                <div className="flex shrink-0 items-center">
+                            <div className="flex flex-1 items-center">
+                                {/* Logo */}
+                                <div className="flex items-center">
                                     <img
                                         alt="Your Company"
-                                        src="/assets/images/logo.png"
-                                        className="h-auto w-[250px]"
+                                        src="/assets/images/ecologo.png"
+                                        className="h-auto ml-2  sm-w-[250px] w-[120px]"
                                     />
-                        
                                 </div>
-                                <div className="hidden items-center md:flex md:justify-start sm:flex-1  z-50" style={{ color: '#286167' }}>
-                                    <div className="flex lg:space-x-7">
-                                        {navigation.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                aria-current={item.current ? 'page' : undefined}
-                                                className={classNames(
-                                                    item.current ? 'text-gren-500' : ' hover:text-blue-900',
-                                                    'rounded-md px-3 py-2 text-md font-medium',
-                                                )}
-                                            >
-                                                {item.name}
-                                            </a>
-                                        ))}
-                                    </div>
+
+                                {/* Navigation links */}
+                                <div className="hidden md:flex items-center space-x-6 text-[#286167] ml-auto">
+                                    {navigation.map((item) => (
+                                        <a
+                                            key={item.name}
+                                            href={item.href}
+                                            aria-current={item.current ? 'page' : undefined}
+                                            className={classNames(
+                                                item.current ? 'text-0' : 'hover:text-blue-900',
+                                                'rounded-md px-3 py-2 text-md font-medium'
+                                            )}
+                                        >
+                                            {item.name}
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
+
 
                             {/* Desktop buttons */}
                             <div className="hidden md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -119,8 +120,8 @@ const Topnav = () => {
                             document.body.style.overflow = 'unset';
                         }}
                     >
-                        <DisclosurePanel className="md:hidden fixed top-16 overflow-hidden left-0 w-full bg-black z-50 h-full">
-                            <div className="space-y-1 fixed px-2 pb-3 pt-2 overflow-y-auto max-h-[calc(100vh-200px)]">
+                        <DisclosurePanel className="md:hidden fixed top-16 overflow-hidden left-0 w-full bg-white z-50 h-[50vh]" >
+                            <div className="space-y-10 fixe text-center px-2 pb-3 pt-2 overflow-y-auto max-h-[calc(100vh-200px)]" >
                                 {navigation.map((item) => (
                                     <DisclosureButton
                                         key={item.name}
@@ -128,7 +129,7 @@ const Topnav = () => {
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
-                                            item.current ? 'bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                            item.current ? ' text-black ' : 'text-black hover:bg-gray-700 hover:text-white',
                                             'block rounded-md px-3 py-2 text-base font-medium',
                                         )}
                                     >
@@ -139,17 +140,10 @@ const Topnav = () => {
                             <div className="flex flex-col bottom-20 absolute w-full items-center px-2 pb-3">
                                 <button
                                     type="button"
-                                    className="relative mb-3 rounded px-3 py-2 text-green-400 hover:text-white w-full text-center"
+                                    className="relative rounded bg-[#286167] px-3 py-2 text-white hover:text-white w-full text-center"
                                 >
                                     <span className="sr-only">View notifications</span>
-                                    <a href="#">Login</a>
-                                </button>
-                                <button
-                                    type="button"
-                                    className="relative rounded bg-green-400 px-3 py-2 text-white hover:text-white w-full text-center"
-                                >
-                                    <span className="sr-only">View notifications</span>
-                                    <a href="#">Get Started</a>
+                                    <a href="#">Subscribe</a>
                                 </button>
                             </div>
                         </DisclosurePanel>
