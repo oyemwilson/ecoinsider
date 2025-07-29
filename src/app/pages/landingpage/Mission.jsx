@@ -3,7 +3,7 @@ import React from 'react'
 const Mission = () => {
     return (
         <>
-            <div className="px-[10%] py-20 bg-white">
+            <div className="px-[10%] py-20 bg-white " id='missions'>
                 <div className="x lg:mb-20 w-[90%] md:w-[80%] text-center  mx-auto">
                     <h1 className="mx-auto text-center text-[#286167] text-3xl md:text-4xl xl:text-5xl leading-snug sm:leading-normal">
                         We go deeper than climate headlines,
@@ -54,7 +54,7 @@ const Mission = () => {
                         </div>
 
                         {/* CTA */}
-                        <a href="#" className="text-[#286167] font-semibold text-lg flex justify-center lg:justify-start items-center hover:underline">
+                        <a href="https://open.substack.com/pub/ecoinsider/p/coming-soon?r=5dblai&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" className="text-[#286167] font-semibold text-lg flex justify-center lg:justify-start items-center hover:underline">
                             Explore Insights
                             <span className="ml-2">→</span>
                         </a>

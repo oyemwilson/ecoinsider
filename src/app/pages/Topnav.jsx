@@ -5,9 +5,9 @@ import { useState, useEffect } from 'react';
 
 const navigation = [
     { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
-    { name: 'Insights', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
+    { name: 'About', href: '#missions', current: false },
+    { name: 'Insights', href: 'https://open.substack.com/pub/ecoinsider/p/coming-soon?r=5dblai&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false', current: false },
+    { name: 'Contact', href: '#missions', current: false },
 ];
 
 function classNames(...classes) {
@@ -97,7 +97,7 @@ const Topnav = () => {
                                     className="relative text-green-700 px-3 py-2 hover:text-white"
                                 >
                                     <span className="sr-only">View notifications</span>
-                                    <a href="#" style={{ color: '#286167' }}>Subscribe</a>
+                                    <a href="https://open.substack.com/pub/ecoinsider/p/coming-soon?r=5dblai&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" style={{ color: '#286167' }}>Subscribe</a>
                                 </button>
                             </div>
                         </div>
@@ -143,7 +143,7 @@ const Topnav = () => {
                                     className="relative rounded bg-[#286167] px-3 py-2 text-white hover:text-white w-full text-center"
                                 >
                                     <span className="sr-only">View notifications</span>
-                                    <a href="#">Subscribe</a>
+                                    <a href="https://open.substack.com/pub/ecoinsider/p/coming-soon?r=5dblai&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false">Subscribe</a>
                                 </button>
                             </div>
                         </DisclosurePanel>

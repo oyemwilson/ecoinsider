@@ -16,7 +16,7 @@ const Homepage = () => {
 
         <button className="mt-5 sm-w-full w-">
           <a
-            href="#"
+            href="https://open.substack.com/pub/ecoinsider/p/coming-soon?r=5dblai&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false"
             className="inline-flex items-center justify-center mt-6 text-white p-2 px-3 sm:px-6 py-3 text-sm sm:text-xl rounded-3xl transition-colors duration-200 relative overflow-hidden"
             style={{
               backgroundColor: '#286167',
