@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYDIR=/home/readlwjy/public_html/
+    - export REPOSITORYDIR=/home/readlwjy/repositories/my-app/
+    - /bin/flock -n $REPOSITORYDIR/deploy.lock -c "/usr/bin/npm install && /usr/bin/npm run build"
+    - /bin/rsync -rav --delete $REPOSITORYDIR/out/ $DEPLOYDIR
